@@ -5,7 +5,7 @@ var elDrink = document.getElementById('ageChoice2').checked;
 if (elDrink === true){
     $('#results').append(notOfAge);
 }
-$('#submitButton').hide();
+
 };
 
 document.getElementById('submitButton').onclick = checkAge;
@@ -61,7 +61,6 @@ document.getElementById('staff').onclick = showDeals4;
 // status = 'closed'; // set the default menu status
 
 
-
 var Foodrecommend1 = "Flacoís Tacos is what we recommend, here is the address 1116 20 West Granville, check http://flacostacosonline.com/ for detial";
 
 function checkFood(){
@@ -70,13 +69,14 @@ if (FoodChoice === true )
 {
     $('#results').append(Foodrecommend1);
     }   
-$('#submitButton').hide();
-    
+
 };
+document.getElementById('submitButton').onclick = checkFood;
 
 
 
-var Foodrecommend2 = "Veranda Restaurant & Coffee, it gives 10% to loyola student"
+
+var Foodrecommend2 = "Veranda Restaurant & Coffee, it gives 10% off to loyola student"
 
 function checkLoyolaStudent(){
         var StudentChoice = document.getElementById('studentChoice1').checked;
@@ -90,12 +90,10 @@ function checkLoyolaStudent(){
              $('#results').append(Foodrecommend2);
              $('#results').append(Foodrecommend1);
                     }
-
             }
+};
 
-        $('#submitButton').hide();
-
-}
+document.getElementById('submitButton').onclick = checkLoyolaStudent;
 
 
 
@@ -124,19 +122,9 @@ $('#submitButton').hide();
 
 }
 
+
+
 document.getElementById('submitButton').onclick = checkevent;
-document.getElementById('submitButton').onclick = checkFood;
-document.getElementById('submitButton').onclick = checkLoyolaStudent;
-
-
-
-
-
-
-
-
-
-
 
 
 
