@@ -24,10 +24,15 @@ function clearResults2() {
 });};
 document.getElementById('resetButton').onclick = clearResults2;
 
+
+
+
 //*********************
 function showDeals1() {
     $(function(){
     $('p#show-week').toggle();
+   
+
 });};
 
 function showDeals2() {
@@ -43,6 +48,7 @@ function showDeals3() {
 function showDeals4() {
     $(function(){
     $('p#show-staff').toggle();
+
 });};
 
 document.getElementById('week').onclick = showDeals1;
@@ -53,4 +59,84 @@ document.getElementById('staff').onclick = showDeals4;
 
 //use a switch statement for sidebar, example:
 // status = 'closed'; // set the default menu status
-//
+
+
+
+var Foodrecommend1 = "Flacoís Tacos is what we recommend, here is the address 1116 20 West Granville, check http://flacostacosonline.com/ for detial";
+
+function checkFood(){
+    var FoodChoice = document.getElementById('activityChoice1').checked;
+if (FoodChoice === true )
+{
+    $('#results').append(Foodrecommend1);
+    }   
+$('#submitButton').hide();
+    
+};
+
+
+
+var Foodrecommend2 = "Veranda Restaurant & Coffee, it gives 10% to loyola student"
+
+function checkLoyolaStudent(){
+        var StudentChoice = document.getElementById('studentChoice1').checked;
+
+        if (StudentChoice === true )
+            if(FoodChoice === true )
+
+            {
+                {
+
+             $('#results').append(Foodrecommend2);
+             $('#results').append(Foodrecommend1);
+                    }
+
+            }
+
+        $('#submitButton').hide();
+
+}
+
+
+
+
+var Eventrecommend1 = "Menís Volleyball vs Ball State. ";
+var Eventrecommend2 = "Loyola Fine Arts Exibition ";
+
+
+function checkevent(){
+var eventChoice = document.getElementById('activityChoice3').checked;
+var dateChoice = document.getElementById('date').checked;
+ 
+ $('#results').append("here is check event");
+
+if (eventChoice === true )
+{
+
+    $('#results').append(Eventrecommend2);
+
+    if (dateChoice === 2018-05-03)
+    {
+    $('#results').append(Eventrecommend1);
+        }
+    }   
+$('#submitButton').hide();
+
+}
+
+document.getElementById('submitButton').onclick = checkevent;
+document.getElementById('submitButton').onclick = checkFood;
+document.getElementById('submitButton').onclick = checkLoyolaStudent;
+
+
+
+
+
+
+
+
+
+
+
+
+
